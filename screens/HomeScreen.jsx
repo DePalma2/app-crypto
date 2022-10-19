@@ -1,4 +1,4 @@
-import { Text, View, StatusBar, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { View, StatusBar, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import React, { Component } from 'react'
 import { EvilIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
@@ -9,7 +9,7 @@ export class HomeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: "#fff", marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
-        <StatusBar translucent={true} />
+        <StatusBar translucent={true} backgroundColor="#84B082"/>
         <View style={{ flex: 1, flexDirection: "column" }}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
             <View style={{ flex: 1, paddingHorizontal: "2%", marginTop: Constants.statusBarHeight }}>
@@ -20,9 +20,9 @@ export class HomeScreen extends Component {
             </View>
           </TouchableWithoutFeedback>
         </View>
-       <View style={{ marginTop: 80 }}>
-        <ListCrypto/>
-       </View>
+        <View style={{ marginTop: 80 }}>
+          <ListCrypto/>
+        </View>
       </View>
     )
   }

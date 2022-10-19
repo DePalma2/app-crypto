@@ -5,10 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
 import HomeScreen from '../screens/HomeScreen';
-import CryptoScreen from '../screens/CryptoScreen';
 import ExchangeScreen from '../screens/ExchangeScreen';
 
-import { Ionicons } from '@expo/vector-icons'; 
 import { Foundation } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -33,20 +31,9 @@ function Tabs() {
                     headerShown: false,
                     tabBarShowLabel: false,
                     tabBarIcon: ({ color, size }) => (
-                    <Ionicons name="home-outline" size={size} color={color} />
+                    <Foundation name="bitcoin" size={size} color={color} />
                 ), 
                 }}/>
-                <Tab.Screen 
-                name='Crypto' 
-                component={CryptoScreen}
-                options={{ 
-                    headerShown: false,
-                    tabBarShowLabel: false,
-                    tabBarIcon: ({ color, size }) => (
-                        <Foundation name="bitcoin" size={size} color={color} />
-                    ),
-                }}
-                />
                 <Tab.Screen 
                 name='Exchanges' 
                 component={ExchangeScreen}
